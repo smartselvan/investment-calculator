@@ -1,29 +1,41 @@
 <form>
   <div class="input-group">
-    <div>
+    <p>
       <label for="initialInvestment" title="initialInvestment">
         Initial Investment
       </label>
-      <input type="number" min="0" max="9999999" name="initialInvestment"  [(ngModel)]="initialInvestment"/>
-    </div>
-    <div>
+      <input
+        type="number"
+        name="initialInvestment"
+        [(ngModel)]="initialInvestment"
+      />
+    </p>
+    <p>
       <label for="annualInvestment" title="annualInvestment">
         Annual Investment
       </label>
-      <input type="number" min="0" max="9999999" name="annualInvestment"  [(ngModel)]="annualInvestment"/>
-    </div>
-    <div>
+      <input
+        type="number"
+        name="annualInvestment"
+        [(ngModel)]="annualInvestment"
+      />
+    </p>
+  </div>
+  <div class="input-group">
+    <p>
       <label for="expectedReturn" title="expectedReturn">
         Expected Return
       </label>
-      <input type="number" min="0" max="100" name="expectedReturn"  [(ngModel)]="expectedReturn"/>
-    </div>
-    <div>
+      <input type="number" name="expectedReturn" [(ngModel)]="expectedReturn" />
+    </p>
+    <p>
       <label for="duration" title="duration">Duration </label>
-      <input type="number" min="0" max="500" name="duration"  [(ngModel)]="duration"/>
-    </div>
+      <input type="number" name="duration" [(ngModel)]="duration" />
+    </p>
   </div>
-  <div style="margin: 10px;">
-    <button type="button" (click)="calculateInvestmentResults()">Calculate</button>
-  </div>
+  <p>
+    <button type="button" (click)="calculateInvestmentResults()">
+      Calculate
+    </button>
+  </p>
 </form>

@@ -15,10 +15,10 @@ export class UserInputComponent {
 
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
-  initialInvestment!: number;
-  annualInvestment!: number;
-  expectedReturn!: number;
-  duration!: number;
+  initialInvestment: number = 1000;
+  annualInvestment: number = 100;
+  expectedReturn: number = 5;
+  duration: number = 10;
 
   calculateInvestmentResults() {
       const userInput:UserInput = {

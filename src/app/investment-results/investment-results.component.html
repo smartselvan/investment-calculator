@@ -1,25 +1,28 @@
 @if(annualData.length > 0){
 <table>
   <thead>
-    <th>Year</th>
-    <th>Investment Value</th>
-    <th>Interest(year)</th>
-    <th>Total Interest</th>
-    <th>Invested Capital</th>
+    <tr>
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest(Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
   </thead>
   <tbody>
     @for(investmentResult of annualData; track investmentResult.year){
     <tr>
       <td>{{ investmentResult.year }}</td>
       <td>{{ investmentResult.valueEndOfYear | currency }}</td>
-      <td>{{ investmentResult.interest }}</td>
-      <td>{{ investmentResult.totalInterest }}</td>
-      <td>{{ investmentResult.totalAmountInvested  | currency}}</td>
+      <td>{{ investmentResult.interest | currency }}</td>
+      <td>{{ investmentResult.totalInterest | currency }}</td>
+      <td>{{ investmentResult.totalAmountInvested | currency }}</td>
     </tr>
     }
   </tbody>
 </table>
-}
-@else {
-  <p id="fallback">Please enter investment details and submit to get the results</p>
+} @else {
+<p class="center">
+  Please enter investment details and submit to get the results.
+</p>
 }

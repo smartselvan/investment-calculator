@@ -1,15 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { InvestmentResult } from './investment-results.model';
+import { InvestmentResultsService } from './investment-results.service';
 
 @Component({
   selector: 'app-investment-results',
   imports: [CurrencyPipe],
   templateUrl: './investment-results.component.html',
-  styleUrl: './investment-results.component.css'
+  styleUrl: './investment-results.component.css',
 })
 export class InvestmentResultsComponent {
-
-  @Input() annualData: InvestmentResult[] = []; 
-
+  constructor(private investmentResultsService:InvestmentResultsService){}
+  
+  annualData =  computed(() => this.investmentResultsService.resultData());
 }

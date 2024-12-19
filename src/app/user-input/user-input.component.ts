@@ -6,7 +6,7 @@ import { UserInput } from './user-input.model';
 
 @Component({
   selector: 'app-user-input',
-  imports: [FormsModule],
+  standalone: false,
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css'
 })
